@@ -1,12 +1,83 @@
-*{
+/* ===================================
+   🌐 Global Design Tokens
+=================================== */
+
+:root {
+   /* 🎨 Colors */
+  --purple-100: hsl(254, 88%, 90%);
+  --purple-500: hsl(256, 67%, 59%);
+  --yellow-100: hsl(31, 66%, 93%);
+  --yellow-500: hsl(39, 100%, 71%);
+  --white: hsl(0, 0%, 100%);
+  --black: hsl(0, 0%, 7%);
+
+  /* 🔠 Typography */
+  --font-family-base: 'DM Sans', sans-serif;
+  --font-size-base: 18px;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+
+  /* 📏 Layout */
+  --mobile-width: 375px;
+  --desktop-width: 1440px;
+  --max-content-width: 1200px;
+  --section-padding: 2rem;
+  --gap: 1.5rem;
+
+
+  /* 🌀 Shadows */
+  --shadow-light: 0 2px 5px rgba(0, 0, 0, 0.05);
+  --shadow-medium: 0 4px 12px rgba(0, 0, 0, 0.1);
+
+  /* 🧱 Border Radius */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 16px;
+
+  /* 💻 Breakpoints */
+  --breakpoint-sm: 480px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1440px;
+}
+
+/* =============================
+   🧰 Base Styles & Resets
+   ============================= */
+
+   *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-},
+   }
+html{
+    font-size: 100%;
+    scroll-behavior: smooth;
+}
 
 body{
-    font-family: 'Poppins', sans-serif;
-    background-color: #f0f0f0;
-    color: #333;
-    
-},
+    font-family: var(--font-family-base);
+    font-size: var(--font-size-base);
+    font-weight: var(--font-weight-regular);
+    color: var(--black);
+    background-color: var(--white);
+    line-height: 1.6;
+}
+
+img,
+svg {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
